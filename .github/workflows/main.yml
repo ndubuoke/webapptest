@@ -29,6 +29,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./packages/api
-          file: ./packages/api/Dockerfile
+          platforms: linux/amd64,linux/arm64
           push: true
-          tags: user/app:latest
+          tags: |
+            asyncdeveloper/grammar-check-backend:latest
